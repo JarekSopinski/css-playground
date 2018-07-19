@@ -1,3 +1,5 @@
+<!--based on: https://www.youtube.com/watch?v=U17mz-RFfAY-->
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,5 +11,14 @@
         <div class="icon">
             <div class="hamburger"></div>
         </div>
+
+        <script src="jquery-3.3.1.min.js"></script>
+
+        <script>
+            const $icon = $('.icon');
+            $icon.on('click', () => {
+                $icon.toggleClass('active')
+            })
+        </script>
     </body>
 </html>

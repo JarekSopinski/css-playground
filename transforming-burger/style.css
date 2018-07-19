@@ -4,6 +4,7 @@ body {
     background: #FF5C40;
 }
 
+/* icon container: */
 .icon {
     position: absolute;
     top: 50%;
@@ -14,6 +15,7 @@ body {
     cursor: pointer;
 }
 
+/* creating middle line: */
 .hamburger {
     width: 50px;
     height: 6px;
@@ -22,10 +24,11 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
     transition: .5s
 }
 
+/* creating top and bottom lines: */
 .hamburger:before,
 .hamburger:after {
     content: '';
@@ -33,14 +36,32 @@ body {
     width: 50px;
     height: 6px;
     background: #FFF;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
     transition: .5s
 }
 
+/* positioning top and bottom lines: */
 .hamburger:before{
     top: -16px
 }
 
 .hamburger:after{
     top: 16px
+}
+
+/* hiding middle line: */
+.icon.active .hamburger {
+    background: rgba(0,0,0,0); /*ofk, display none can also be used*/
+    box-shadow: 0 2px 5px rgba(0,0,0,0);
+}
+
+/* rotating top and bottom lines to form a cross: */
+.icon.active .hamburger:before {
+    top: 0;
+    transform: rotate(45deg)
+}
+
+.icon.active .hamburger:after {
+    top: 0;
+    transform: rotate(135deg)
 }
