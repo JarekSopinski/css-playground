@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Grid 02 - rows</title>
+	<style>
+
+		body{
+			color: #fff;
+			font-family: 'Nunito Semibold';
+			text-align: center;
+		}
+		#content{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            /* grid-auto-rows: minmax(200px, auto); */
+            /* grid-template-rows: 200px 300px 400px 200px; */
+            grid-template-rows: repeat(10, minmax(200px, auto));
+            /* grid-column-gap: 10px;
+            grid-row-gap: 10px; */
+            grid-gap: 10px;
+			max-width: 960px;
+			margin: 0 auto;
+		}
+		#content div{
+			background: #3bbced;
+			padding: 30px;
+		}
+		#content div:nth-child(even){
+			background: #777;
+			padding: 30px;
+		}
+
+	</style>
+</head>
+
+<body>
+
+	<div id="content">
+
+		<div>1</div>
+		<div>2</div>
+		<div>In per adhuc ullum, in viris clita aliquip eos. Mel copiosae recusabo corrumpit eu, eos ei erroribus efficiendi. Odio magna eripuit quo ut, utamur consequat cu has, postea moderatius qui in. Dicta gubergren liberavisse in vel, mei saepe impetus accusam ne. Novum vocibus oportere ex ius, usu ne posse ullum ubique. Paulo blandit usu ex, congue persius qui ei. Cu natum nominavi voluptaria ius.
+            </div>
+		<div>4</div>
+		<div>5</div>
+		<div>6</div>
+		<div>7</div>
+		<div>8</div>
+		<div>9</div>
+
+	</div>
+
+</body>
+</html>
