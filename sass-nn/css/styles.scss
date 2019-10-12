@@ -11,6 +11,10 @@
     li {
         float: left;
         width: (100% / 6);
+        @include mediaQuery(600px){
+            // any content here will refer to @content in @mediaQuery mixin
+            width: 100%;
+        }
     }
     a {
         color: $offWhite;

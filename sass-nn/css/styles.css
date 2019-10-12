@@ -48,6 +48,12 @@ li {
   width: 16.66667%;
 }
 
+@media screen and (max-width: 600px) {
+  #main-nav li {
+    width: 100%;
+  }
+}
+
 #main-nav a {
   color: #f8f9fb;
   text-decoration: none;
