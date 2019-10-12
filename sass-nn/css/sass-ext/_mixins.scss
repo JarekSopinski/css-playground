@@ -38,7 +38,7 @@
     margin-bottom: $margin;
     // formula for setting equal width:
     width: ( (100% - (($colsCount - 1) * $margin)) / $colsCount );
-    // target last child by the numer of cols in a row:
+    // target last child by the numer of cols in a row ( #{} is a sass interpolation ):
     &:nth-child(#{$colsCount}n){
         margin-right: 0;
     }
