@@ -45,7 +45,7 @@ li {
 
 #main-nav li {
   float: left;
-  width: 14%;
+  width: 16.66667%;
 }
 
 #main-nav a {
@@ -127,5 +127,53 @@ section h1 {
   font-size: 20px;
   max-width: 500px;
   margin: 60px 0;
+}
+
+#services {
+  margin-bottom: 60px;
+}
+
+#services li {
+  float: left;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  width: 33.33333%;
+}
+
+#services img {
+  width: 60%;
+  margin: 20px 20%;
+}
+
+#services a {
+  text-decoration: none;
+  color: #032f3e;
+  font-weight: bold;
+}
+
+#services a:hover {
+  color: red;
+}
+
+#services ul:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+#projects li {
+  float: left;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  width: 23.5%;
+}
+
+#projects li:nth-child(4n) {
+  margin-right: 0;
+}
+
+#projects li img {
+  width: 100%;
 }
 /*# sourceMappingURL=styles.css.map */
