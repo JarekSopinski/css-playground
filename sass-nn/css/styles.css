@@ -37,6 +37,12 @@ li {
   width: 100%;
 }
 
+#main-nav ul:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
 #main-nav li {
   float: left;
   width: 14%;
@@ -50,10 +56,8 @@ li {
   text-align: center;
 }
 
-#main-nav ul:after {
-  content: '';
-  display: block;
-  clear: both;
+#main-nav a:hover {
+  background: #333;
 }
 
 section h1 {
