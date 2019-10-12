@@ -17,6 +17,9 @@
         display: block;
         text-transform: uppercase;
         font-weight: bold;
+        @include mediaQuery(3000px, 1200px){
+            font-size: 68px;
+        }
     }
     span.title {
         font-weight: normal;
@@ -44,8 +47,20 @@
     }
 }
 
-@mixin  mediaQuery($arg) {
-    @media screen and (max-width: $arg){
-        @content;
+/*
+A mixin with optional number of arguments. If statement checks number
+of arguments and in case of two, applies media query for both
+width and height. nth() selects argument's index.
+*/
+@mixin mediaQuery($args...) {
+    @if length($args) == 1 {
+        @media screen and (max-width: nth($args, 1)){
+            @content;
+        }
+    }
+    @if length($args) == 2 {
+        @media screen and (max-width: nth($args, 1)) and (min-width: nth($args, 2)) {
+            @content;
+        }
     }
 }

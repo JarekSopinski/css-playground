@@ -29,6 +29,11 @@ li {
           box-sizing: border-box;
 }
 
+/*
+A mixin with optional number of arguments. If statement checks number
+of arguments and in case of two, applies media query for both
+width and height. nth() selects argument's index.
+*/
 #main-nav {
   background: #032f3e;
 }
@@ -95,6 +100,12 @@ section h1 {
   font-weight: bold;
 }
 
+@media screen and (max-width: 3000px) and (min-width: 1200px) {
+  .lead-banner span {
+    font-size: 68px;
+  }
+}
+
 .lead-banner span.title {
   font-weight: normal;
   margin-bottom: 30px;
@@ -121,6 +132,12 @@ section h1 {
   display: block;
   text-transform: uppercase;
   font-weight: bold;
+}
+
+@media screen and (max-width: 3000px) and (min-width: 1200px) {
+  .lessons-banner span {
+    font-size: 68px;
+  }
 }
 
 .lessons-banner span.title {
